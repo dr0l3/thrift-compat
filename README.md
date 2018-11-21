@@ -40,3 +40,5 @@
     - With Enums you send the number, not the label. Missing label -> Unknown Value
     - With unions a mutated type (OR NAME) will throw. Missing element -> Unknown value
     - When a "normal" value is missing it gets the default value for its type, if such a value exists
+    
+Typedefs doesn't seem to carry any meaning :()
