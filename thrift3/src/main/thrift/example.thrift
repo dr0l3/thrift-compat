@@ -171,4 +171,5 @@ service Output {
     Color2 enumRemoved()
     Meh unionChanged()
     Meh unionRemoved()
+    Meh unionRenamed()
 }

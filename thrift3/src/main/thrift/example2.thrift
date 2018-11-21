@@ -150,7 +150,7 @@ enum Color2 {
 }
 
 union Meh {
-    1: i64 hello
+    1: i64 notHello
 }
 
 service Output {
@@ -171,4 +171,5 @@ service Output {
     Color2 enumRemoved()
     Meh unionChanged()
     Meh unionRemoved()
+    Meh unionRenamed()
 }

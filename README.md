@@ -32,11 +32,11 @@
     - You cant change types, ever. It will throw.
     - You cant violate the required keyword (neither by removing the value nor making it optional). It will throw.
     - With Enums you send the number, not the label. Missing label -> Unknown Value
-    - With unions a mutated type will throw. Missing element -> Unknown value
+    - With unions a mutated type (OR NAME) will throw. Missing element -> Unknown value
     - When a "normal" value is missing it gets the default value for its type, if such a value exists
 - Output
     - You cant change types, ever. It will throw.
     - You cant violate the required keyword (neither by removing the value nor making it optional). It will throw.
     - With Enums you send the number, not the label. Missing label -> Unknown Value
-    - With unions a mutated type will throw. Missing element -> Unknown value
+    - With unions a mutated type (OR NAME) will throw. Missing element -> Unknown value
     - When a "normal" value is missing it gets the default value for its type, if such a value exists

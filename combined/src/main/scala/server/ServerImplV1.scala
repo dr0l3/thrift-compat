@@ -89,4 +89,6 @@ class OutputImlv1 extends Output.MethodPerEndpoint {
   override def unionChanged(): Future[Meh] = Future(Meh.Hello("hello"))
 
   override def unionRemoved(): Future[Meh] = Future(Meh.Woo("woo"))
+
+  override def unionRenamed(): Future[Meh] = Future(Meh.Hello("hello"))
 }

@@ -112,9 +112,10 @@ object Test extends App {
   val bb = Try(Await.result(client2.enumRemoved()))
   val bc = Try(Await.result(client2.unionChanged()))
   val bd = Try(Await.result(client2.unionRemoved()))
+  val be = Try(Await.result(client2.unionRenamed()))
 
-  val res = List(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, ba,bb,bc,bd)
-  val alphabet = List("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "ba", "bb", "bc", "bd")
+  val res = List(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, ba, bb, bc, bd, be)
+  val alphabet = List("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "ba", "bb", "bc", "bd", "be")
 
   res.zip(alphabet).foreach {
     case (res, char) =>
