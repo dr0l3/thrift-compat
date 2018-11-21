@@ -1,10 +1,42 @@
 ## Intellij
 
-Do this if there are read squiglies
+- Positions
+    - input
+    - output
+- type of type
+    - struct
+    - enum
+    - union
+- type of change
+    - add "normal"
+    - add required
+    - add optional
+    - change type
+    - required -> "normal"
+    - required -> optional
+    - "normal" -> required
+    - "normal" -> optional
+    - optional -> required
+    - optional -> "normal"
+    - add element to co-products
+    - remove element from co-product
+    - rename element in co-products
+    - change type in element in coproduct
+    - TypeDef to "regular"
+    - "regular" to TypeDef
 
- 1) Go to settings page for SBT at Settings -> Build, Execution, Deployment -> Build Tools -> SBT.
- 2) In the launcher section, choose Custom and point to the SBT launcher installed in the OS. In Ubuntu, the default location is /usr/share/sbt-launcher-packaging/bin/sbt-launcher.jar
 
-If that doesnt work:
+### Conclusions
 
-I had the same problem. I solved by choosing again at the moment of opening the project /usr/share/sbt-launcher-packaging/bin/sbt-launcher.jar in "Import Project from SBT" -> Global SBT settings.
+- Input
+    - You cant change types, ever. It will throw.
+    - You cant violate the required keyword (neither by removing the value nor making it optional). It will throw.
+    - With Enums you send the number, not the label. Missing label -> Unknown Value
+    - With unions a mutated type will throw. Missing element -> Unknown value
+    - When a "normal" value is missing it gets the default value for its type, if such a value exists
+- Output
+    - You cant change types, ever. It will throw.
+    - You cant violate the required keyword (neither by removing the value nor making it optional). It will throw.
+    - With Enums you send the number, not the label. Missing label -> Unknown Value
+    - With unions a mutated type will throw. Missing element -> Unknown value
+    - When a "normal" value is missing it gets the default value for its type, if such a value exists
