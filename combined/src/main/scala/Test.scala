@@ -114,8 +114,10 @@ object Test extends App {
   val bd = Try(Await.result(client2.unionRemoved()))
   val be = Try(Await.result(client2.unionRenamed()))
 
-  val res = List(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, ba, bb, bc, bd, be)
-  val alphabet = List("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "ba", "bb", "bc", "bd", "be")
+  val ca = Try(Await.result(client.createPersonUserType("name", 31, UserType.Admin("admin"))))
+
+  val res = List(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, ba, bb, bc, bd, be, ca)
+  val alphabet = List("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "ba", "bb", "bc", "bd", "be", "ca")
 
   res.zip(alphabet).foreach {
     case (res, char) =>

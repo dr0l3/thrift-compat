@@ -14,7 +14,7 @@ enum Color {
 }
 
 union UserType {
-    1: string admin
+    1: string admins
     2: i64 agent
 }
 
