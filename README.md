@@ -33,7 +33,7 @@
     - You cant violate the required keyword (neither by removing the value nor making it optional and sending none). It will throw.
     - With Enums you send the number, not the label. Missing label -> Unknown Value
     - With unions a mutated type will throw. Missing element -> Unknown value. Names do not have semantic meaning.
-    - When a "normal" value is missing it gets the default value for its type, if such a value exists
+    - When a "normal" value is missing it gets the default value for its type, if such a value exists (see https://twitter.github.io/scrooge/Semantics.html)
 - Output
     - You cant change types, ever. It will throw.
     - You cant violate the required keyword (neither by removing the value nor making it optional and sending none). It will throw.
