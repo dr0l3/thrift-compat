@@ -1,4 +1,13 @@
-## Intellij
+This repo is an attempt to quantify how thrift types can be changed.
+
+Specifically what is interesting to know is whether a change to a type will cause runtime exceptions or whether thrift/scrooge will attempt to do some sort of corrective action.
+
+This is useful when designing API's and answering questions like
+
+- Should this type be a union or just a struct with optional fields?
+- Do I want to use an enum or should we stick with a string and parse the enum later?
+
+## Types of mutations to the schema
 
 - Positions
     - input
